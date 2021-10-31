@@ -1,27 +1,40 @@
-# OptestFE
+# Frontend Objective platform Assignment
+This is the Angular project made for the Objective platform frontend assignment.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+It contains one view:
+ - `<base-url>`: this is the entry point of the system, it contains the paginated list of beers (10 items per page). 
+If click on the 'beer icon' is possible to add a beer to my favourite beers section. It's possible to see which are our favorite beers by clicking on the 'View favorite beers' button. It's also possible search a beer by name or by description using the two different search input.
 
-## Development server
+The web app is very simple, I used the ngx-pagination module to implement the pagination, because it was a faster solution. I have however created the API which returns a paginated list. Therefore pagination can also be implemented by calling the BE.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Project setup NPM
+You can run the application using NPM
 
-## Code scaffolding
+```
+npm install
+npm run serve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
 
-## Build
+The app will be available at `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Project setup Docker
+You can run the application using Docker:
 
-## Running unit tests
+```
+docker-compose build
+docker-compose up
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+The app will be available at `http://localhost:4200/`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Improvements
+A lot of improvements could be done:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ - The beer button should be different (:hover) when I mark a beer as favourite.
+ - Test suite should be included as soon as possible.
+ - The "View more" button should show the details of a specific beer, retrieving the others data from the in-memory db.
+ - The mobile visualization for this page should be improved.
+ 
+Please consider that I only had 2.5 days for the test (Friday afternoon to Sunday).

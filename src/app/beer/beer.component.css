@@ -1,0 +1,32 @@
+.card {
+    align-items: center;
+    min-height: 800px;
+    max-height: 800px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.fit {
+    width: fit-content;
+    height: 500px;
+    padding: 20px;
+
+}
+
+.border-colored{
+    border-bottom: 2px solid grey;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.attach-bottom{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

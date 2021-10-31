@@ -1,0 +1,20 @@
+
+<div class="card mb-4 box-shadow">
+    <div class="border-colored">
+        <img class="card-img-top fit" [attr.src]="getImagePath()" alt="Card image cap">
+    </div>
+    <div class="card-body">
+        <h3>{{beer.name}}</h3>
+        <h5 class="card-text">{{beer.tagline}}</h5>
+        <p class="card-text">{{ (beer.description.length>250)? (beer.description | slice:0:250)+'..':(beer.description) }}</p>
+        <p class="card-text"> ph:{{beer.ph}} | abv: {{beer.abv}} | ibu: {{beer.ibu}} | srm: {{beer.srm}} | ebc: {{beer.ebc}}</p>
+        <div class="row col-md-12 attach-bottom">
+            <div class="btn-group">
+                <button type="button" class="btn btn-lg btn-outline-info">View more</button>
+                <button type="button" (click)="setFavouriteBeer()" class="btn btn-lg btn-outline-warning">
+                    <fa-icon [icon]="faBeer"></fa-icon>
+                </button>
+            </div>            
+        </div>
+    </div>
+</div>

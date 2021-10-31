@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="row mb-4">
+        <div class="col-md-2">
+            <button type="button" (click)="getFavouriteBeers()" class="btn btn-lg btn-outline-info">View Favourites beer</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" (click)="getBeers()" class="btn btn-lg btn-outline-warning">Catalogue</button>
+        </div>
+        <div class="col-md-3 search_container">
+            <input type="text" class="input input_button" [(ngModel)]="nameSearch" placeholder="Search by beer's name">
+            <button type="button" (click)="getBeersByName()" class="btn btn-lg btn-outline-warning"><fa-icon [icon]="faSearch"></fa-icon></button>
+        </div>
+        <div class="col-md-3 search_container">
+            <input type="text" class="input input_button" [(ngModel)]="descriptionSearch" placeholder="Search by beer's description"> 
+            <button type="button" (click)="getBeersByDescription()" class="btn btn-lg btn-outline-warning"><fa-icon [icon]="faSearch"></fa-icon></button>
+        </div>
+    </div>
+    <ng-container *ngIf="beers.length > 0">
+        <div class="col-md-4" 
+            *ngFor="let beer of beers | paginate: 
+                {
+                    id:'beers_pagination',
+                    itemsPerPage: 10,
+                    currentPage: page,
+                    totalItems: totalRecords
+                }"
+        >
+            <app-beer [beer]="beer"></app-beer>
+        </div>
+    </ng-container>
+    <div class="text-center mt-5" *ngIf="beers.length == 0">
+        <h3>No Beers found!</h3>
+    </div>
+</div>
+<div class="row" *ngIf="beers.length> 0">
+    <pagination-controls id="beers_pagination" [maxSize]=5 [directionLinks]="true" (pageChange)="page = $event"></pagination-controls>
+</div>

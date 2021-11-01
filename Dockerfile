@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4200 9229
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["npm", "run", "start-docker"]

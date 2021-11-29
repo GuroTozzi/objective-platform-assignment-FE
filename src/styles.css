@@ -1,10 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-html{
-    display: flex;
-    justify-content: center;
-    
-
+html {
+  display: flex;
+  justify-content: center;
 }
-body{
-    width: 80%;
+body {
+  width: 80%;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+}
+
+.my_container {
+  display: flex;
+}
+
+.userDetail {
+  display: flex;
+  flex-direction: column;
 }

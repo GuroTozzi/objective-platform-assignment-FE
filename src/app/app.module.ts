@@ -9,19 +9,29 @@ import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { UsersComponent } from './users/users.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserComponent } from './user/user.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BeersComponent,
-    BeerComponent
+    BeerComponent,
+    UsersComponent,
+    UserComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FontAwesomeModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

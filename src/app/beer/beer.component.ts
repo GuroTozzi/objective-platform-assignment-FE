@@ -19,9 +19,7 @@ export class BeerComponent implements OnInit {
 
   setFavouriteBeer(){
     this.isFav = !this.isFav;
-    if(this.isFav){
-      this.bService.setFav(this.beer.id);
-    }
+    this.bService.setFav(this.beer.id, this.isFav);
   }
 
   constructor(private domSanitizer: DomSanitizer, private bService: BeersService) {

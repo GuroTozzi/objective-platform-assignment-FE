@@ -1,5 +1,25 @@
 <div class="title_container">
-    <h1>Beers Catalogue</h1>
+    <h1>My CryptoWorld Management</h1>
 </div>
 
-<app-beers></app-beers>
+
+<!-- <app-graphcontainer></app-graphcontainer> -->
+
+<div class="my_container col-12">
+    <div class="row">
+        <button type="button" (click) = "addUser()" class="btn btn-success">Add</button>
+    </div>
+    <div class="user col-9">
+        <app-users (onUpdateUserParent) = showDetails($event)></app-users>    
+    </div>
+    <div class="userDetail col-3" *ngIf="showForm">
+        <app-user-detail 
+            [user] = "selectedUser" 
+            (showFormDetails) = showFormDetails($event) 
+            (hideDetails) = hideDetails()
+        >
+        </app-user-detail>
+    </div>
+</div>
+
+<!-- <app-beers></app-beers> -->

@@ -13,6 +13,7 @@ import { UsersComponent } from './users/users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 
 
@@ -23,7 +24,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     BeerComponent,
     UsersComponent,
     UserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

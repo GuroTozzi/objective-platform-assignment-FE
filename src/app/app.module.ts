@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { UcfirstPipe } from './ucfirst.pipe';
 
 
 
@@ -25,7 +26,8 @@ import { PipesComponent } from './pipes/pipes.component';
     UsersComponent,
     UserComponent,
     UserDetailComponent,
-    PipesComponent
+    PipesComponent,
+    UcfirstPipe
   ],
   imports: [
     BrowserModule,
